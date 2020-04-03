@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://people/bPeople.gd" type="Script" id=1]
+[ext_resource path="res://people/manBlue_stand.png" type="Texture" id=2]
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[node name="bPeople" type="Node2D"]
+
+[node name="bPeople" type="RigidBody2D" parent="."]
+physics_material_override = SubResource( 2 )
+gravity_scale = 0.0
+continuous_cd = 1
+contacts_reported = 1
+contact_monitor = true
+sleeping = true
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bPeople"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="texture" type="Sprite" parent="bPeople"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="sibaMatam" type="Timer" parent="bPeople"]
+
+[node name="hingbaMatam" type="Timer" parent="bPeople"]
+wait_time = 12.0
+one_shot = true
+[connection signal="body_entered" from="bPeople" to="bPeople" method="_on_bPeople_body_entered"]
+[connection signal="timeout" from="bPeople/sibaMatam" to="bPeople" method="_on_sibaMatam_timeout"]
+[connection signal="timeout" from="bPeople/hingbaMatam" to="bPeople" method="_on_hingbaMatam_timeout"]

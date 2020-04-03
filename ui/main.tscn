@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ui/main.gd" type="Script" id=1]
+[ext_resource path="res://people/manBlue_stand.png" type="Texture" id=2]
+[ext_resource path="res://people/manRed_stand.png" type="Texture" id=3]
+[ext_resource path="res://people/hitman1_stand.png" type="Texture" id=4]
+[ext_resource path="res://people/soldier1_stand.png" type="Texture" id=5]
+[ext_resource path="res://people/JetBrainsMono-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="NoiseTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 523.602, 306.228 )
+scale = Vector2( 2.02266, 1.18594 )
+texture = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -157.325, -40.5078 )
+scale = Vector2( 1.82128, 2.62389 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -39.7883, -40.8146 )
+scale = Vector2( 1.69896, 2.89835 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 67.1787, -39.8311 )
+scale = Vector2( 1.85623, 2.9441 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 173.569, -33.9302 )
+scale = Vector2( 1.83293, 2.89835 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -220.0
+margin_top = 29.0
+margin_right = -94.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 2 )
+text = "Healthy"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -79.0
+margin_top = 33.0
+margin_right = -7.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Sick"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = -143.584
+margin_top = -218.772
+margin_right = 180.416
+margin_bottom = -171.772
+custom_fonts/font = SubResource( 2 )
+text = "COVID19 simulation"
+
+[node name="Label6" type="Label" parent="."]
+margin_left = -153.672
+margin_top = -155.682
+margin_right = 206.328
+margin_bottom = -108.682
+custom_fonts/font = SubResource( 2 )
+text = "Stay Home dont panic"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 22.489
+margin_top = 34.9669
+margin_right = 94.489
+margin_bottom = 81.9669
+custom_fonts/font = SubResource( 2 )
+text = "Death"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 140.701
+margin_top = 36.9339
+margin_right = 230.701
+margin_bottom = 83.9339
+custom_fonts/font = SubResource( 2 )
+text = "cured"
+
+[node name="Button" type="Button" parent="."]
+margin_left = -116.431
+margin_top = 102.099
+margin_right = 90.5694
+margin_bottom = 166.099
+custom_fonts/font = SubResource( 3 )
+text = "Start Simluation"
+icon = ExtResource( 2 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

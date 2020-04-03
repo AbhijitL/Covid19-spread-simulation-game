@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui/UI.gd" type="Script" id=1]
+
+[node name="UI" type="Node2D" groups=[
+"UI_Manage",
+]]
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 858.935
+margin_top = 10.7865
+margin_right = 1005.94
+margin_bottom = 112.787
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+columns = 2
+
+[node name="normalL" type="Label" parent="Panel/GridContainer"]
+margin_right = 57.0
+margin_bottom = 14.0
+text = "Healthy :"
+
+[node name="normalNum" type="Label" parent="Panel/GridContainer"]
+margin_left = 61.0
+margin_right = 85.0
+margin_bottom = 14.0
+text = "199"
+
+[node name="sickL" type="Label" parent="Panel/GridContainer"]
+margin_top = 18.0
+margin_right = 57.0
+margin_bottom = 32.0
+text = "Sick:"
+
+[node name="sickNum" type="Label" parent="Panel/GridContainer"]
+margin_left = 61.0
+margin_top = 18.0
+margin_right = 85.0
+margin_bottom = 32.0
+text = "1"
+
+[node name="curedL" type="Label" parent="Panel/GridContainer"]
+margin_top = 36.0
+margin_right = 57.0
+margin_bottom = 50.0
+text = "Cured:"
+
+[node name="curedNum" type="Label" parent="Panel/GridContainer"]
+margin_left = 61.0
+margin_top = 36.0
+margin_right = 85.0
+margin_bottom = 50.0
+text = "0"
+
+[node name="deathL" type="Label" parent="Panel/GridContainer"]
+margin_top = 54.0
+margin_right = 57.0
+margin_bottom = 68.0
+text = "Death:"
+
+[node name="deathNum" type="Label" parent="Panel/GridContainer"]
+margin_left = 61.0
+margin_top = 54.0
+margin_right = 85.0
+margin_bottom = 68.0
+text = "0"
